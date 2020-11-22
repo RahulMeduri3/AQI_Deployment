@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+</head>
+<style>
+table, th, td {
+            border: 1px solid black;
+}
+table{
+    border-collapse: collapse;
+    width: 50vw !important;
+    margin: auto;
+}
+header, td, th{
+    text-align:center;
+}
+tr:hover {background-color: #f5f5f5;}
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+body, html{
+    height: 100%
+}
+div.bg {
+    background-image: url("static/bg_img.jpg");
+    height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.table-responsive {
+    width: 100%;
+}
+
+</style>
+<body>
+
+	<header>
+		<div class="container">
+		<h2>Air Quality Index Prediction</h2>
+		
+	</div>
+	</header>
+	
+
+	 <div class="table-responsive bg">
+	 <table class="table">
+         <tbody>
+         <th>Air Quailty Index Predicted Values</th>
+         {# here we iterate over every item in our list#}
+         {% for item in prediction %}
+             <tr><td title="Air quality index : {{item}}">{{ item }}</td></tr>
+         {% endfor %}
+         </tbody>
+     </table>
+
+    </div>
+</body>
+</html>

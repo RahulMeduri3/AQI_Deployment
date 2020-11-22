@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+body, html{
+    height: 100%;
+}
+.ml-container {
+    border: 1px solid lightgrey;
+    height: 300px;
+    margin-top: 100px;
+}
+</style>
+<body>
+<div class="outer-container">
+	<header>
+		<div class="container">
+
+		<h2 style="text-align: center">Air Quality Index Prediction</h2>
+		
+	</div>
+	</header>
+    <div class="col-xs-4">
+    </div>
+	<div class="ml-container col-xs-4">
+    
+    <form action="getfile" method="POST" enctype="multipart/form-data" style="height: 100%; padding-top: 100px !important;padding-left: 100px;">
+        <h5 ><b>Test File:</b></h5>
+        <input type="file" name="myfile" style="margin-top: 10px">
+        <input class="btn btn-success" type="submit" value="Predict Air Quality Index" style="margin-top: 10px;">
+    </form>
+
+	</div>
+    <div class="col-xs-4">
+    
+    </div>
+</div>	
+	
+
+</body>
+</html>
